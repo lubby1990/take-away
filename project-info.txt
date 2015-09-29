@@ -1,0 +1,49 @@
+一、架构
+	1. 暂时不做app端。只做web。
+	2. 前后台分离，分成web端和服务端，使用dubbo作为soa方式
+	3. 做成分布式的。
+	4. 项目结构
+		3.1 ta-customer-web  用户web端
+		3.2 ta-business-web  商家web端
+		3.3 srv-bussiness	 商家服务
+		3.4 srv-custormer	 用户服务
+		3.5 srv-pay			 支付服务
+		3.6 srv-map			 地图服务
+		3.7 srv-email        邮件服务
+		3.7 srv-sms			 短信服务
+二、业务
+1. 用户平台
+	1.1 用户注册，登录
+	1.2 展示附近商家货品
+	1.3 用户下单
+	1.4 用户付款，退款
+	1.5 用户点评、打分
+2. 商家平台
+	1.1 商家注册，登录
+	1.2 商家管理商品
+
+
+
+
+	
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=srv-business -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=srv-customer -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=srv-map -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=srv-sms -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=srv-pay -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=srv-email -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=ta-business-web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=ta-customer-web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+

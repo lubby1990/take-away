@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="srv-business" />
+        <module name="srv-customer" />
+        <module name="srv-email" />
+        <module name="srv-map" />
+        <module name="srv-pay" />
+        <module name="srv-sms" />
+        <module name="ta-business-web" />
+        <module name="ta-customer-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="srv-business" target="1.5" />
+      <module name="srv-customer" target="1.5" />
+      <module name="srv-email" target="1.5" />
+      <module name="srv-map" target="1.5" />
+      <module name="srv-pay" target="1.5" />
+      <module name="srv-sms" target="1.5" />
+      <module name="ta-business-web" target="1.5" />
+      <module name="ta-customer-web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
