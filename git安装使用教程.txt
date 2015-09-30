@@ -1,0 +1,31 @@
+1.git安装
+从官网（http://www.git-scm.com/download/）下载安装。
+
+2.设置用户名和邮箱
+
+设置Git的user name和email：
+$ git config --global user.name "liubin"
+$ git config --global user.email "liubib@qq.com"
+
+
+3.生成ssh
+$ ssh-keygen -t rsa -C “liubib@qq.com”
+
+4.拉项目
+在git bash 执行 git clone https://github.com/lubby1990/take-away.git
+如果不行的话请执行 git clone http://github.com/lubby1990/take-away.git
+
+
+
+git相关命令
+1.提交代码
+git必须要先提交代码到本地，在提交代码到服务端。
+git status  查看修改的文件
+git add/rm  添加或者删除修改文件。
+git commit -m "我的注释"  提交代码到本地
+git push origin master 提交代码到github
+
+2.拉最新代码
+git fetch;git rebase
+
+其他命令可以上网搜索

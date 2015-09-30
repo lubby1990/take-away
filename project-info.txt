@@ -76,6 +76,7 @@
 6.soa和rpc      dubbo
 7.分布式锁		zookeeper
 8.缓存			redis
+9.dao层			mybatis
 
 
 9.*配置管理		zookeeper

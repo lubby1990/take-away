@@ -32,7 +32,7 @@
         <module name="ta-customer-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7">
       <module name="srv-business" target="1.5" />
       <module name="srv-customer" target="1.5" />
       <module name="srv-email" target="1.5" />
@@ -41,6 +41,7 @@
       <module name="srv-sms" target="1.5" />
       <module name="ta-business-web" target="1.5" />
       <module name="ta-customer-web" target="1.5" />
+      <module name="ta-parent" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

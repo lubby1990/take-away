@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/../srv-sms/srv-sms.iml" filepath="$PROJECT_DIR$/../srv-sms/srv-sms.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ta-business-web/ta-business-web.iml" filepath="$PROJECT_DIR$/../ta-business-web/ta-business-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ta-customer-web/ta-customer-web.iml" filepath="$PROJECT_DIR$/../ta-customer-web/ta-customer-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ta-parent/ta-parent.iml" filepath="$PROJECT_DIR$/../ta-parent/ta-parent.iml" />
     </modules>
   </component>
 </project>

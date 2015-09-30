@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/../srv-sms/pom.xml" />
         <option value="$PROJECT_DIR$/../ta-business-web/pom.xml" />
         <option value="$PROJECT_DIR$/../ta-customer-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../take-away-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/../ta-parent/pom.xml" />
       </list>
     </option>
   </component>
@@ -31,7 +33,7 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
   </component>
 </project>
