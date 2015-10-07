@@ -1,4 +1,4 @@
-外卖平台
+﻿外卖平台
 作为一个提供外卖的平台，分为用户平台、商家平台、运营平台。用户可以在用户平台上选购，商家可以在商家平台管理商品，并且对用户所下订单进行操作。运营平台提供给运营人员使用，如审核商家注册、冻结商家或者商品。
 
 一、架构
@@ -106,4 +106,7 @@ mvn archetype:generate -DgroupId=com.lubby -DartifactId=ta-customer-web -Darchet
 
 mvn archetype:generate -DgroupId=com.lubby -DartifactId=ta-operation-web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=ta-operation-web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.lubby -DartifactId=ta-common -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 

@@ -1,0 +1,7 @@
+jdcb.driver="com.mysql.jdbc.Driver"
+driver.url="jdbc:mysql://127.0.0.1:3306/customer?useUnicode=true&amp;charEncoding=UTF-8"
+jdbc.user="root"
+jdbc.password="admin"
+jdbc.maxIdleTime="100"
+jdbc.minPoolSize="2"
+jdbc.maxPoolSize="5"
