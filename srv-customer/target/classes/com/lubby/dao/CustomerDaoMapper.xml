@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lubby.dao.CustomerMapper">
+    <resultMap id="customerMap" type="com.lubby.bean.Customer">
+        <result column="id" property="id"></result>
+        <result column="email" property="email"></result>
+        <result column="name" property="name"></result>
+        <result column="address" property="address"></result>
+        <result column="gender" property="gender"></result>
+        <result column="ct_time" property="ctTime"></result>
+        <result column="update_time" property="updateTime"></result>
+        <result column="picture_url" property="pictureUrl"></result>
+    </resultMap>
+    <sql id="customer_fileds">
+        id, email, name, address, gender, ct_time, update_time, picture_url
+    </sql>
+    <select id="getCustomerById" parameterType="long" resultMap="customerMap">
+        select
+        <include refid="customer_fileds"></include>
+        from t_customer where id = #{customerId}
+    </select>
+</mapper>
