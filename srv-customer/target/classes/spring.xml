@@ -9,15 +9,13 @@
 	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-4.1.xsd
-	http://www.springframework.org/schema/tx
-	http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
-    http://www.springframework.org/schema/aop
-    http://www.springframework.org/schema/beans/spring-aop-4.1.xsd">
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/beans/spring-aop-4.1.xsd">
+    <context:component-scan base-package="com.lubby"></context:component-scan>
     <import resource="spring-mybatis.xml"></import>
     <!--<import resource="spring-redis.xml"></import>-->
     <!--<import resource="spring-zookeeper.xml"></import>-->
-    <!--<bean id="customer" class="com.lubby.bean.Customer">-->
-    <!--<constructor-arg value="Jack"></constructor-arg>-->
-    <!--</bean>-->
 
 </beans>

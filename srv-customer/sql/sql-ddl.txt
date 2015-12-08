@@ -1,4 +1,20 @@
 这个文件是保存数据库定义语句，比如创建、删除数据库，修改字段。需要标注  姓名@时间
 ----------liubin@2015-09-29---------
 
+create table t_customer (
+id int auto_increment comment "用户主键",
+name varchar(100) not null comment "用户姓名",
+phone varchar(11) not null comment "用户手机号" ,
+email varchar(50) not null comment "用户邮箱",
+gender tinyint comment "1:male, 2:female",
+address varchar(100)  comment "用户地址",
+creat_time timestamp not null comment "创建时间",
+update_time timestamp not null comment "修改时间",
+picture_url varchar(100) comment "头像",
+is_deleted tinyint(1) default 1 comment "用户账号状态:0正常，1被冻结, 2被删除",
+primary key (id) using btree,
+key (name) using btree,
+key (phone) using btree
 
+)engine=innodb default charset=utf8
+comment "用户表"

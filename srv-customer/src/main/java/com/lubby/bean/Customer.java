@@ -10,6 +10,7 @@ public class Customer {
     private String email;
     private String name;
     private String address;
+    private String phone;
     private int gender;
     private Date ctTime;
     private Date updateTime;
@@ -79,6 +80,14 @@ public class Customer {
         this.pictureUrl = pictureUrl;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -86,6 +95,7 @@ public class Customer {
                 ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
                 ", gender=" + gender +
                 ", ctTime=" + ctTime +
                 ", updateTime=" + updateTime +

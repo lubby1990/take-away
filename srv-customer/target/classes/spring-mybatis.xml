@@ -17,24 +17,62 @@
     <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
     <!--<property name="location" value="dataLocation.properties"/>-->
     <!--</bean>-->
-    <bean id="propertyConfigurer"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location">
-            <value>classpath:properties/dataLocation.properties</value>
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+    <!--<property name="location" value="classpath:properties/database.properties"></property>-->
+    <!--<property name="fileEncoding" value="utf-8"></property>-->
+    <!--</bean>-->
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:properties/database.properties</value>
+            </list>
         </property>
+        <property name="fileEncoding" value="utf-8"></property>
     </bean>
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+
+    <!-- 数据源1 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <!-- 数据库基本信息配置 -->
+        <property name="url" value="${jdbc.url}"/>
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="timeBetweenEvictionRunsMillis"
+                  value="60000"/>
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxOpenPreparedStatements" value="50"/>
+        <property name="removeAbandonedTimeout" value="180"/>
+        <!--
+                &lt;!&ndash; 申请连接时执行validationQuery检测连接是否有效，配置为true会降低性能 &ndash;&gt;
+                <property name="testOnBorrow" value="${dbcp2.testOnBorrow}"/>
+
+                &lt;!&ndash; 归还连接时执行validationQuery检测连接是否有效，配置为true会降低性能  &ndash;&gt;
+                <property name="testOnReturn" value="${dbcp2.testOnReturn}"/>
+
+                &lt;!&ndash; 建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于
+                     timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。  &ndash;&gt;
+                <property name="testWhileIdle" value="${dbcp2.testWhileIdle}"/>
+
+                &lt;!&ndash; 用来检测连接是否有效的sql，要求是一个查询语句,如果validationQuery为
+                     null，testOnBorrow、testOnReturn、testWhileIdle都不起其作用。 &ndash;&gt;
+                <property name="validationQuery" value="${dbcp2.validationQuery}"/>-->
+    </bean>
+    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
         <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/take-away?useUnicode=true&amp;charEncoding=UTF-8"/>
-        <property name="user" value="root"></property>
+        <property name="user" value="${user}"></property>
         <property name="password" value="admin"></property>
         <property name="maxIdleTime" value="100"/>
         <property name="minPoolSize" value="2"/>
         <property name="maxPoolSize" value="5"/>
-        <!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+        &lt;!&ndash;每60秒检查所有连接池中的空闲连接。Default: 0 &ndash;&gt;
         <property name="idleConnectionTestPeriod" value="60"/>
         <property name="initialPoolSize" value="2"/>
-    </bean>
+    </bean>-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
@@ -44,7 +82,8 @@
     </bean>
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.lubby.dao"></property>
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 
 

@@ -8,12 +8,13 @@
         <result column="name" property="name"></result>
         <result column="address" property="address"></result>
         <result column="gender" property="gender"></result>
+        <result column="phone" property="phone"></result>
         <result column="ct_time" property="ctTime"></result>
         <result column="update_time" property="updateTime"></result>
         <result column="picture_url" property="pictureUrl"></result>
     </resultMap>
     <sql id="customer_fileds">
-        id, email, name, address, gender, ct_time, update_time, picture_url
+        id, email, name, address, phone, gender, creat_time, update_time, picture_url
     </sql>
     <select id="getCustomerById" parameterType="long" resultMap="customerMap">
         select
